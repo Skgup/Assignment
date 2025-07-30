@@ -44,16 +44,16 @@ const Signup: React.FC = () => {
             <>
               <label className="block text-sm mb-1">Your Name</label>
               <input type="text" placeholder="Enter your full name"
-                value={name} onChange={(e) => setName(e.target.value)}
+                value={name} required ={true} onChange={(e) => setName(e.target.value)}
                 className="w-full p-3 border rounded mb-4" />
 
               <label className="block text-sm mb-1">Date of Birth</label>
-              <input type="date" value={dob} onChange={(e) => setDob(e.target.value)}
+              <input type="date" value={dob} required ={true} onChange={(e) => setDob(e.target.value)}
                 className="w-full p-3 border rounded mb-4" />
 
               <label className="block text-sm mb-1">Email</label>
-              <input type="email" placeholder="Enter your email address"
-                value={email} onChange={(e) => setEmail(e.target.value)}
+              <input type="email"  placeholder="Enter your email address"
+                value={email} required ={true} onChange={(e) => setEmail(e.target.value)}
                 className="w-full p-3 border rounded mb-4" />
 
               <button onClick={handleSendOtp}
