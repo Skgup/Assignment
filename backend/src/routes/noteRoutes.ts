@@ -1,0 +1,10 @@
+import express from "express";
+import { getNotes, createNote, deleteNote } from "../controllers/noteController";
+import { protect } from "../middlewares/authMiddleware";
+const router = express.Router();
+
+router.get("/", protect, getNotes);
+router.post("/", protect, createNote);
+router.delete("/:id", protect, deleteNote);
+
+export default router;
